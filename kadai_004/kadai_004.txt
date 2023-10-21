@@ -1,0 +1,39 @@
+Microsoft Windows [Version 10.0.22621.2428]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\keisk\OneDrive\デスクトップ\git_kadai3>git init
+Initialized empty Git repository in C:/Users/keisk/OneDrive/デスクトップ/git_kadai3/.git/
+
+C:\Users\keisk\OneDrive\デスクトップ\git_kadai3>mkdir git_challenge
+
+C:\Users\keisk\OneDrive\デスクトップ\git_kadai3>cd git_challenge
+
+C:\Users\keisk\OneDrive\デスクトップ\git_kadai3\git_challenge>echo "Hello, world!" >> hello_world.txt
+
+C:\Users\keisk\OneDrive\デスクトップ\git_kadai3\git_challenge>git add hello_world.txt
+
+C:\Users\keisk\OneDrive\デスクトップ\git_kadai3\git_challenge>git commit -m "hello_world.txtを追加"
+[main (root-commit) d5fd24f] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git_challenge/hello_world.txt
+
+C:\Users\keisk\OneDrive\デスクトップ\git_kadai3\git_challenge>echo "こんにちは、世界！" >> hello_world.txt
+
+C:\Users\keisk\OneDrive\デスクトップ\git_kadai3\git_challenge>git add hello_world.txt
+
+C:\Users\keisk\OneDrive\デスクトップ\git_kadai3\git_challenge>git commit -m "日本語訳を追記"
+[main 638be4f] 日本語訳を追記
+ 1 file changed, 1 insertion(+)
+
+C:\Users\keisk\OneDrive\デスクトップ\git_kadai3\git_challenge>git log
+commit 638be4fd22e244b011f7e11de0e16e9ad877f7ec (HEAD -> main)
+Author: nekotakkyuu <uffu.lm.tunagi@gmail.com>
+Date:   Thu Oct 19 09:29:59 2023 +0900
+
+    日本語訳を追記
+
+commit d5fd24f6912cfa5c674fb1f3a46da37b5ebbf51d
+Author: nekotakkyuu <uffu.lm.tunagi@gmail.com>
+Date:   Thu Oct 19 09:28:29 2023 +0900
+
+    hello_world.txtを追加
