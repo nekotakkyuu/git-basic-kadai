@@ -1,0 +1,80 @@
+package kadai_024;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Jyanken_Chapter24 {
+
+	public String rock = "r";
+	public String scissors = "s";
+	public String paper = "p";
+	
+	public String mine;
+	public String com;
+
+	public String getMyChoice() {
+
+		Scanner scanner = new Scanner(System.in);
+
+		while (true) {
+			String input = scanner.next();
+
+			if (rock.equals(input)) {
+				input = mine;
+				break;
+			} else if (scissors.equals(input)) {
+				input = mine;
+				break;
+			} else if (paper.equals(input)) {
+				input = mine;
+				break;
+			} else {
+				System.out.println("正しい手ではありません");
+				System.out.println("再度自分のじゃんけんの手を入力しましょう");
+			}	
+		}
+		scanner.close();
+		return this.mine;
+	}
+		
+	
+	public String getRandom() {
+		
+		String[] jyankenArray = new String[3];
+		jyankenArray[0] = "r";
+		jyankenArray[1] = "s";
+		jyankenArray[2] = "p";
+		
+		int num = (int) Math.floor(Math.random() * (jyankenArray.length));
+		
+		System.out.println(jyankenArray[num]);
+		
+		jyankenArray[num] = com;
+		
+		return this.com;
+
+	}
+
+	public void playGame(String mine, String com) {
+		mine = this.mine;
+        com = this.com;		
+		
+		HashMap<String,String> jyankenPlay = new HashMap<String,String>();
+		
+		jyankenPlay.put("r", "グー");
+		jyankenPlay.put("s", "チョキ");
+		jyankenPlay.put("p", "パー");
+		
+		System.out.println("自分の手は" + jyankenPlay.get(this.mine) + ",対戦相手の手は" + jyankenPlay.get(this.com));
+		
+        if(mine.equals(com)) {
+        	System.out.println("あいこです");
+        
+        }else if((mine.equals("r") && com.equals("p")) || ((mine.equals("s") && (com.equals("r")) || ((mine.equals("p") && (com.equals("s"))))))){
+        	System.out.println("自分の負けです");
+        }else {
+        	System.out.println("自分んの勝ちです");
+        }
+	}
+
+}
