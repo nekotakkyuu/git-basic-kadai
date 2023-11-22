@@ -6,15 +6,10 @@ public class JyankenExec_Chapter24 {
 		// TODO 自動生成されたメソッド・スタブ
 		Jyanken_Chapter24 jyanken = new Jyanken_Chapter24();
 		
-		System.out.println("自分のじゃんけんの手を入力しましょう");
-		System.out.println("グーはrockのrを入力しましょう");
-		System.out.println("チョキはscissorsのsを入力しましょう");
-		System.out.println("パーはpaperのpを入力しましょう");
+		String choice = jyanken.getMyChoice();
+		String random = jyanken.getRandom();
 		
-		String my = jyanken.getMyChoice();
-		String you = jyanken.getRandom();
-		
-		jyanken.playGame(my, you);
+		jyanken.playGame(choice, random);
 
 	}
 

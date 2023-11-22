@@ -16,6 +16,11 @@ public class Jyanken_Chapter24 {
 
 		Scanner scanner = new Scanner(System.in);
 
+		System.out.println("自分のじゃんけんの手を入力しましょう");
+		System.out.println("グーはrockのrを入力しましょう");
+		System.out.println("チョキはscissorsのsを入力しましょう");
+		System.out.println("パーはpaperのpを入力しましょう");
+		
 		while (true) {
 			String input = scanner.next();
 
@@ -33,8 +38,7 @@ public class Jyanken_Chapter24 {
 				System.out.println("再度自分のじゃんけんの手を入力しましょう");
 			}	
 		}
-		scanner.close();
-		return this.mine;
+		return mine;
 	}
 		
 	
